@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Github, Linkedin, Mail } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useTheme();
-
   return (
     <nav className="fixed w-full backdrop-blur-md bg-white/10 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,13 +21,6 @@ const Navbar = () => {
             >
               Projects
             </Link>
-
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-purple-400 transition-colors"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
 
             <div className="flex items-center space-x-4">
               <a

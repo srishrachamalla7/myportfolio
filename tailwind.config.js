@@ -18,6 +18,12 @@ export default {
           900: '#4c1d95',
           950: '#2e1065',
         },
+        light: {
+          bg: '#f8fafc',
+          card: '#ffffff',
+          text: '#1e293b',
+          border: '#e2e8f0'
+        }
       },
       animation: {
         'gradient': 'gradient 8s linear infinite',

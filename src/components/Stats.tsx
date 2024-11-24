@@ -5,11 +5,12 @@ const Stats = () => {
   const stats = [
     { label: 'Years of Experience', value: '2+' },
     { label: 'Projects Completed', value: '15' },
+    { label: 'Portfolio Views', value: '100+' },
   ];
 
   return (
     <div className="py-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {stats.map((stat, index) => (
           <motion.div
             key={stat.label}
@@ -21,7 +22,7 @@ const Stats = () => {
             <h3 className="text-4xl font-bold mb-2 gradient-text">
               {stat.value}
             </h3>
-            <p className="text-gray-400 dark:text-gray-600">{stat.label}</p>
+            <p className="text-gray-400">{stat.label}</p>
           </motion.div>
         ))}
       </div>
