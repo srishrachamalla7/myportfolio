@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Code, Cpu, MessageSquare, FileSearch, Film, Pencil, X } from 'lucide-react';
+import {
+  Brain,
+  Code,
+  Cpu,
+  MessageSquare,
+  FileSearch,
+  Film,
+  Pencil,
+  X,
+} from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
 
 const Projects = () => {
@@ -12,15 +21,14 @@ const Projects = () => {
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
-      prev.includes(tag)
-        ? prev.filter((t) => t !== tag)
-        : [...prev, tag]
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
-  const filteredProjects = projects.filter((project) =>
-    selectedTags.length === 0 ||
-    selectedTags.every((tag) => project.tags?.includes(tag))
+  const filteredProjects = projects.filter(
+    (project) =>
+      selectedTags.length === 0 ||
+      selectedTags.every((tag) => project.tags?.includes(tag))
   );
 
   return (
@@ -90,62 +98,92 @@ const Projects = () => {
 };
 
 const projects = [
+  
   {
     title: 'MarketMind',
-    description: 'AI tool that analyzes products, competitors, and market position, generating insightful reports',
+    description:
+      'AI tool that analyzes products, competitors, and market position, generating insightful reports',
     icon: <Brain className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/MarketMind',
     date: '2024',
-    tags: ['Python', 'LangChain', 'GPT-4', 'Streamlit', 'Spaces', 'Scraping']
+    tags: ['Python', 'LangChain', 'GPT-4', 'Streamlit', 'Spaces', 'Scraping'],
   },
   {
-    title: 'EVA Process',
-    description: 'Automated compliance checks and operational efficiency analysis using advanced AI algorithms. Improved compliance transparency and reduced manual audit time by 60%.',
+    title: 'Legal Agent',
+    description:
+      'Automated legal research, content creation, and document editing using cutting-edge AI tools. Enhanced research accuracy, streamlined legal workflows, and reduced document preparation time by 50%.',
     icon: <Cpu className="w-6 h-6" />,
-    link: 'https://github.com/yourusername/eva-process',
+    link: 'https://github.com/srishrachamalla7/LegalAI-Crew',
     date: '2023',
-    tags: ['Python', 'LLaMA', 'Flask', 'OpenAI', 'MongoDB']
+    tags: ['Python', 'CrewAI', 'Langchain', 'Crewtools', 'Tavily', 'Ollama'],
+  },
+  {
+    title: 'ConsumeNice',
+    description:
+      'A web application leveraging OpenFoodFacts API and Google Gemini AI to provide consumers with detailed insights about food products, including nutritional value, environmental impact, and packaging details.',
+    icon: <Code className="w-6 h-6" />,
+    link: 'https://github.com/Saiteja1244/ConsumeNice',
+    date: '2024',
+    tags: ['Python', 'Streamlit', 'Google Gemini', 'OpenFoodFacts API', 'Spaces'],
   },
   {
     title: 'Multimodal AI Assistant',
-    description: 'Built a system combining text, voice, and visual analysis for comprehensive user queries. Integrated multiple AI models for enhanced interaction capabilities.',
+    description:
+      'Built a system combining text, voice, and visual analysis for comprehensive user queries. Integrated multiple AI models for enhanced interaction capabilities.',
     icon: <MessageSquare className="w-6 h-6" />,
-    link: 'https://github.com/yourusername/multimodal-ai',
+    link: 'https://github.com/srishrachamalla7',
     date: '2023',
-    tags: ['Python', 'LLaVA', 'Whisper', 'React']
+    tags: ['Python', 'LLaVA', 'Whisper', 'React'],
   },
   {
     title: 'PDF Information Retrieval',
-    description: 'Developed an intelligent system for extracting and indexing data from PDF documents using RAG and LlamaIndex, enabling efficient search and retrieval.',
+    description:
+      'Developed an intelligent system for extracting and indexing data from PDF documents using RAG and LlamaIndex, enabling efficient search and retrieval.',
     icon: <FileSearch className="w-6 h-6" />,
-    link: 'https://github.com/yourusername/pdf-retrieval',
+    link: 'https://github.com/srishrachamalla7',
     date: '2023',
-    tags: ['Python', 'LlamaIndex', 'FastAPI', 'Redis']
+    tags: ['Python', 'LlamaIndex', 'FastAPI', 'Redis', 'Llama2'],
   },
   {
-    title: 'Web Scraping AI',
-    description: 'Created an AI-powered web scraping system using LLMs for intelligent data extraction and processing from various website structures.',
+    title: 'Linkedin Scraper',
+    description:
+      'Automated LinkedIn profile summarization using AI-driven OCR and language models. Streamlined profile data extraction, enhanced summarization accuracy, and reduced manual effort in profile analysis by 70%.',
     icon: <Code className="w-6 h-6" />,
-    link: 'https://github.com/yourusername/web-scraping-ai',
+    link: 'https://github.com/srishrachamalla7/Linkedin_Scraper',
     date: '2023',
-    tags: ['Python', 'Scrapy', 'GPT-4', 'MongoDB']
+    tags: ['Python', 'Scrapy', 'GPT-4', 'OCR', 'Selenium'],
   },
   {
     title: 'Movie Recommendation System',
-    description: 'A Python-based movie recommendation system that suggests movies based on genres and ratings using Pandas.',
+    description:
+      'A Python-based movie recommendation system that suggests movies based on genres and ratings using Pandas.',
     icon: <Film className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/Movie_Recommend.git',
     date: '2022',
-    tags: ['Python', 'Pandas', 'Movie Recommendations', 'Data Analysis']
+    tags: [
+      'Python',
+      'Pandas',
+      'Movie Recommendations',
+      'Data Analysis',
+      'Machine Learning',
+    ],
   },
   {
     title: 'BlogWriter_Agent',
-    description: 'A multi-agent system for collaborative blog content generation, using CrewAI and Ollama for autonomous content creation and editing.',
+    description:
+      'A multi-agent system for collaborative blog content generation, using CrewAI and Ollama for autonomous content creation and editing.',
     icon: <Pencil className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/BlogWriter_Agent.git',
     date: '2024',
-    tags: ['Python', 'AI', 'Multi-agent Systems', 'Content Generation', 'Ollama', 'CrewAI']
-  }
+    tags: [
+      'Python',
+      'AI',
+      'Multi-agent Systems',
+      'Content Generation',
+      'Ollama',
+      'CrewAI',
+    ],
+  },
 ];
 
 export default Projects;

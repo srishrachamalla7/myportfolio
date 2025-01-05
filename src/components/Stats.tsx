@@ -5,7 +5,7 @@ const Stats = () => {
   const stats = [
     { label: 'Years of Experience', value: '2+' },
     { label: 'Projects Completed', value: '15' },
-    { label: 'Portfolio Views', value: '100+' },
+    { label: 'Hackthons Participated', value: '25+' },
   ];
 
   return (

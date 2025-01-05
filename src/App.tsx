@@ -1,18 +1,16 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 
 function App() {
-  const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname !== '/') {
-      navigate('/');
-    }
-  }, []);
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black transition-colors duration-300">
@@ -21,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <ScrollToTop />
     </div>
   );
 }

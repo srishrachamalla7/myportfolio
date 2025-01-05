@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Send, Calendar, Check } from 'lucide-react';
+import { Download, Send, Check } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const ContactForm = () => {
@@ -10,17 +10,7 @@ const ContactForm = () => {
     message: '',
   });
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  const showSuccessToast = () => {
+  const showDownloadToast = () => {
     toast.custom((t) => (
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -29,7 +19,7 @@ const ContactForm = () => {
         className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3"
       >
         <Check className="w-5 h-5" />
-        <span>Success!</span>
+        <span>Thanks for downloading!</span>
       </motion.div>
     ));
   };
@@ -49,7 +39,17 @@ const ContactForm = () => {
       );
 
       if (response.ok) {
-        showSuccessToast();
+        toast.custom((t) => (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3"
+          >
+            <Check className="w-5 h-5" />
+            <span>Message sent successfully!</span>
+          </motion.div>
+        ));
         setFormData({ name: '', email: '', message: '' });
       } else {
         toast.error('Failed to send message. Please try again.');
@@ -61,7 +61,13 @@ const ContactForm = () => {
   };
 
   const handleDownload = () => {
-    showSuccessToast();
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=1cC_F_wNK7hDwPxFC8XF_TWwhQ0vLeVze';
+    link.download = 'Srish_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showDownloadToast();
   };
 
   return (
@@ -148,16 +154,9 @@ const ContactForm = () => {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex flex-col space-y-6"
+            className="card hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] border border-transparent hover:border-purple-500/50 flex flex-col justify-between h-full"
           >
-            <div className="card hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] border border-transparent hover:border-purple-500/50">
-              <h3 className="text-xl font-semibold mb-4 gradient-text">
-                Schedule a Meeting
-              </h3>
-              <div className="tidycal-embed" data-path="srishrachamalla"></div>
-            </div>
-
-            <div className="card hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] border border-transparent hover:border-purple-500/50">
+            <div>
               <h3 className="text-xl font-semibold mb-4 gradient-text">
                 About Me
               </h3>
@@ -166,16 +165,14 @@ const ContactForm = () => {
                 as a Jr Data Scientist at Spearsoft, developing AI-powered
                 systems to streamline business operations.
               </p>
-              <a
-                href="/path-to-your-resume.pdf"
-                download
-                onClick={handleDownload}
-                className="gradient-border w-full px-8 py-3 rounded-lg bg-gray-800 text-white flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors"
-              >
-                <Download className="w-5 h-5" />
-                Download Resume
-              </a>
             </div>
+            <button
+              onClick={handleDownload}
+              className="gradient-border w-full px-8 py-3 rounded-lg bg-gray-800 text-white flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </button>
           </motion.div>
         </div>
       </div>
