@@ -62,7 +62,7 @@ const ContactForm = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1cC_F_wNK7hDwPxFC8XF_TWwhQ0vLeVze';
+    link.href = 'https://drive.google.com/uc?export=download&id=1cC_F_wNK7hDwPxFC8XF_TWwhQ0vLeVze'; // Updated the resuem 
     link.download = 'Srish_Resume.pdf';
     document.body.appendChild(link);
     link.click();
