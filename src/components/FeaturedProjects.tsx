@@ -12,7 +12,7 @@ const FeaturedProjects = () => {
         Featured Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div onClick={() => navigate('/projects')} className="cursor-pointer">
+        <div onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className="cursor-pointer">
           <ProjectCard
             title="MarketMind"
             description="AI tool that analyzes products, competitors, and market position, generating insightful reports"
@@ -20,7 +20,7 @@ const FeaturedProjects = () => {
             link="#"
           />
         </div>
-        <div onClick={() => navigate('/projects')} className="cursor-pointer">
+        <div onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className="cursor-pointer">
           <ProjectCard
             title="Legal Agent"
             description="Automated legal research, content creation, and document editing using cutting-edge AI tools"
@@ -28,7 +28,7 @@ const FeaturedProjects = () => {
             link="#"
           />
         </div>
-        <div onClick={() => navigate('/projects')} className="cursor-pointer">
+        <div onClick={(e) => { e.preventDefault(); navigate('/projects'); }} className="cursor-pointer">
           <ProjectCard
             title="Multimodal AI"
             description="Advanced conversational AI combining text, voice, and visual analysis"
