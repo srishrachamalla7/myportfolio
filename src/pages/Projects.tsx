@@ -184,6 +184,23 @@ const projects = [
       'CrewAI',
     ],
   },
+  {
+    title: 'Interactive Chat with Ollama LLM',
+    description:
+      'A Streamlit-based chat interface for Ollama LLM featuring real-time responses, styled chat bubbles, and chat history management. Provides smooth conversational experience with streamed responses.',
+    icon: <MessageSquare className="w-6 h-6" />,
+    link: 'https://github.com/srishrachamalla7/ollama_chatbot',
+    date: '2024',
+    tags: ['Python', 'Streamlit', 'Ollama', 'LLM', 'Chat Interface'],
+    },
+    {
+      title: 'Gold Rates Tracker',
+      description: 'Python-based application that tracks and visualizes gold rates (24K, 22K, 18K) across various Indian cities. Features interactive graphs and real-time data visualization.',
+      icon: <Code className="w-6 h-6" />,
+      link: 'https://huggingface.co/spaces/Srish117/GoldRates',
+      date: '2024',
+      tags: ['Python', 'Data Visualization', 'Web Scraping', 'Spaces', 'Plotly'],
+    }
 ];
 
 export default Projects;
