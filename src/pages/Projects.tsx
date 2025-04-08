@@ -98,7 +98,30 @@ const Projects = () => {
 };
 
 const projects = [
-  
+  {
+    title: 'EVA Platform',
+    description: 'All-encompassing suite of AI-powered tools for streamlining business processes including recruitment, compliance auditing, and market analysis. Features include AI-driven recruitment assistant (EVA People) for candidate scoring and automated compliance auditing (EVA Process) using fine-tuned LLMs.',
+    icon: <Brain className="w-6 h-6" />,
+    link: 'https://www.spearsoftech.com/Home',
+    date: '2024',
+    tags: ['Python', 'OpenAI', 'LangChain', 'OCR', 'SQL', 'HuggingFace'],
+  },
+  {
+    title: 'Healthmate',
+    description: 'AI-driven healthcare diagnostics tool that analyzes patient information with 95% accuracy. Predicts diseases, recommends medication, and suggests lifestyle changes using advanced LLMs and medical research integration.',
+    icon: <Cpu className="w-6 h-6" />,
+    link: 'https://www.spearsoft.ai/',
+    date: '2024',
+    tags: ['CrewAI', 'Flask', 'LLama', 'GPT-4', 'PubMed', 'ASR', 'n8n'],
+  },
+  {
+    title: 'Mailmagnet',
+    description: 'AI-powered email automation tool that creates personalized email campaigns by analyzing sender services and recipient company data through advanced webscraping.',
+    icon: <MessageSquare className="w-6 h-6" />,
+    link: 'https://www.spearsoft.ai/',
+    date: '2024',
+    tags: ['OpenAI', 'LangChain', 'Flask', 'MongoDB', 'Pandas'],
+  },
   {
     title: 'MarketMind',
     description:
