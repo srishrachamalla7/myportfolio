@@ -4,11 +4,16 @@ import {
   Brain,
   Code,
   Cpu,
+  LinkedinIcon,
+  BrainCircuitIcon,
   MessageSquare,
   FileSearch,
   Film,
   Pencil,
   X,
+  ScaleIcon,
+  AccessibilityIcon,
+  Apple,
 } from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
 
@@ -109,7 +114,8 @@ const projects = [
   {
     title: 'Healthmate',
     description: 'AI-driven healthcare diagnostics tool that analyzes patient information with 95% accuracy. Predicts diseases, recommends medication, and suggests lifestyle changes using advanced LLMs and medical research integration.',
-    icon: <Cpu className="w-6 h-6" />,
+    // Doctor icon
+    icon: <AccessibilityIcon className="w-6 h-6" />,
     link: 'https://www.spearsoft.ai/',
     date: '2024',
     tags: ['CrewAI', 'Flask', 'LLama', 'GPT-4', 'PubMed', 'ASR', 'n8n'],
@@ -129,13 +135,13 @@ const projects = [
     icon: <Brain className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/MarketMind',
     date: '2024',
-    tags: ['Python', 'LangChain', 'GPT-4', 'Streamlit', 'Spaces', 'Scraping'],
+    tags: ['Python', 'LangChain', 'GPT-4', 'Streamlit', 'Spaces', 'Web Scraping'],
   },
   {
     title: 'Legal Agent',
     description:
       'Automated legal research, content creation, and document editing using cutting-edge AI tools. Enhanced research accuracy, streamlined legal workflows, and reduced document preparation time by 50%.',
-    icon: <Cpu className="w-6 h-6" />,
+    icon: <ScaleIcon className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/LegalAI-Crew',
     date: '2023',
     tags: ['Python', 'CrewAI', 'Langchain', 'Crewtools', 'Tavily', 'Ollama'],
@@ -144,7 +150,7 @@ const projects = [
     title: 'ConsumeNice',
     description:
       'A web application leveraging OpenFoodFacts API and Google Gemini AI to provide consumers with detailed insights about food products, including nutritional value, environmental impact, and packaging details.',
-    icon: <Code className="w-6 h-6" />,
+    icon: <Apple className="w-6 h-6" />,
     link: 'https://github.com/Saiteja1244/ConsumeNice',
     date: '2024',
     tags: ['Python', 'Streamlit', 'Google Gemini', 'OpenFoodFacts API', 'Spaces'],
@@ -171,10 +177,19 @@ const projects = [
     title: 'Linkedin Scraper',
     description:
       'Automated LinkedIn profile summarization using AI-driven OCR and language models. Streamlined profile data extraction, enhanced summarization accuracy, and reduced manual effort in profile analysis by 70%.',
-    icon: <Code className="w-6 h-6" />,
+    icon: <LinkedinIcon className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/Linkedin_Scraper',
     date: '2023',
-    tags: ['Python', 'Scrapy', 'GPT-4', 'OCR', 'Selenium'],
+    tags: ['Python', 'Web Scraping', 'GPT-4', 'OCR', 'Selenium'],
+  },
+  {
+    title: 'Second Brain Telegarm Bot',
+    description:
+      'A Telegram bot that allows users to save and retrieve notes, images, and links. It uses a vector database for efficient storage and retrieval.',
+    icon: <BrainCircuitIcon className="w-6 h-6" />,
+    link: 'https://t.me/thooooootbot',
+    date: '2025',
+    tags: ['Python', 'Telegram API', 'Vector Database', 'CrewAI', 'Flask', 'Railway', 'Llama 3.1'],
   },
   {
     title: 'Movie Recommendation System',
@@ -200,7 +215,6 @@ const projects = [
     date: '2024',
     tags: [
       'Python',
-      'AI',
       'Multi-agent Systems',
       'Content Generation',
       'Ollama',
@@ -214,7 +228,7 @@ const projects = [
     icon: <MessageSquare className="w-6 h-6" />,
     link: 'https://github.com/srishrachamalla7/ollama_chatbot',
     date: '2024',
-    tags: ['Python', 'Streamlit', 'Ollama', 'LLM', 'Chat Interface'],
+    tags: ['Python', 'Streamlit', 'Ollama', 'Chat Interface'],
     },
     {
       title: 'Gold Rates Tracker',
@@ -223,6 +237,14 @@ const projects = [
       link: 'https://huggingface.co/spaces/Srish117/GoldRates',
       date: '2024',
       tags: ['Python', 'Data Visualization', 'Web Scraping', 'Spaces', 'Plotly'],
+    },
+    {
+      title: 'Yours Second Brain App',
+      description: 'A web application that allows users to save and retrieve notes, financial records, password management,bookmarks and todo lists. It uses supabase for efficient storage and retrieval.',
+      icon: <Brain className="w-6 h-6" />,
+      link: 'https://yourssecondbrain.netlify.app/',
+      date: '2025',
+      tags: ['lovable', 'Supabase', 'Web App', 'Netlify'],
     }
 ];
 

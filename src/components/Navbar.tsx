@@ -1,10 +1,34 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Github, Linkedin, Mail, BookOpen } from 'lucide-react';
+import { Github, Linkedin, Mail, BookOpen, Check, DownloadIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const showDownloadToast = () => {
+    toast.custom((t) => (
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3"
+      >
+        <Check className="w-5 h-5" />
+        <span>Thanks for downloading!</span>
+      </motion.div>
+    ));
+  };
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=16WLM7gbXKKttnOKoyY6aKI6C_jt5Gqg6';
+    link.download = 'Srish_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showDownloadToast();
+  };
 
   const socialLinks = [
     {
@@ -26,9 +50,13 @@ const Navbar = () => {
       icon: <Mail size={20} />,
       label: 'Email',
       href: 'mailto:srishrachamalla2002@gmail.com'
+    },
+    {
+      icon: <DownloadIcon size={20} />,
+      label: 'Resume',
+      onClick: handleDownload
     }
   ];
-
   return (
     <nav className="fixed w-full backdrop-blur-md bg-white/10 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,9 +98,10 @@ const Navbar = () => {
                 <motion.a
                   key={link.label}
                   href={link.href}
+                  onClick={link.onClick}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative text-gray-300 hover:text-purple-400 transition-colors"
+                  className="group relative text-gray-300 hover:text-purple-400 transition-colors cursor-pointer"
                   whileHover={{ scale: 1.1 }}
                 >
                   {link.icon}

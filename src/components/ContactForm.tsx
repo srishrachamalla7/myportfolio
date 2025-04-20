@@ -62,7 +62,7 @@ const ContactForm = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1cC_F_wNK7hDwPxFC8XF_TWwhQ0vLeVze'; // Updated the resuem 
+    link.href = 'https://drive.google.com/uc?export=download&id=16WLM7gbXKKttnOKoyY6aKI6C_jt5Gqg6';
     link.download = 'Srish_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -162,7 +162,7 @@ const ContactForm = () => {
               </h3>
               <p className="text-gray-300 mb-6">
                 AI and tech innovator from Hyderabad, India. Currently working
-                as a Jr Data Scientist at Spearsoft, developing AI-powered
+                as a Data Scientist at Spearsoft, developing AI-powered
                 systems to streamline business operations.
               </p>
             </div>
