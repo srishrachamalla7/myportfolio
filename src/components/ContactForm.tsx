@@ -28,7 +28,7 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        'https://hook.eu2.make.com/kvyt1r3pwxb2o2u3fv5l167108soovww',
+        'https://hook.eu2.make.com/y7ob6b2idkkb0z3vhclc2e13j4353m14',
         {
           method: 'POST',
           headers: {
@@ -99,6 +99,7 @@ const ContactForm = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
+                  placeholder='Your Name'
                   required
                 />
               </div>
@@ -118,11 +119,12 @@ const ContactForm = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
+                  placeholder="Your email address"
                   required
                 />
               </div>
 
-              <div>
+                <div>
                 <label
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-300 mb-2"
@@ -135,11 +137,12 @@ const ContactForm = () => {
                   className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-gray-600 text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   value={formData.message}
                   onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
+                  setFormData({ ...formData, message: e.target.value })
                   }
+                  placeholder="Let me know about your project requirements, partnership ideas, hiring opportunities, or any specific questions you have. Providing context helps!"
                   required
                 />
-              </div>
+                </div>
 
               <button
                 type="submit"
@@ -156,14 +159,15 @@ const ContactForm = () => {
             animate={{ opacity: 1, x: 0 }}
             className="card hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] border border-transparent hover:border-purple-500/50 flex flex-col justify-between h-full"
           >
-            <div>
+            
+    <div>
               <h3 className="text-xl font-semibold mb-4 gradient-text">
                 About Me
               </h3>
               <p className="text-gray-300 mb-6">
-                AI and tech innovator from Hyderabad, India. Currently working
-                as a Data Scientist at Spearsoft, developing AI-powered
-                systems to streamline business operations.
+                As an <span className="text-purple-400">AI Engineer</span> & Developer in Hyderabad, India, I'm dedicated to building <span className="text-pink-400">innovative AI solutions</span>. Currently at <span className="text-purple-400">Spearsoft</span>, I focus on leveraging cutting-edge AI to create <span className="text-pink-400">efficient and intelligent systems</span> for businesses.
+                <br/><br/> {/* Use <br/> for line breaks in HTML/JSX paragraphs */}
+                I thrive on continuous learning and applying a <span className="text-purple-400">versatile tech stack</span> to tackle diverse problems. My passion lies in the <span className="text-pink-400">end-to-end process</span> of bringing AI concepts to life and contributing to a future powered by <span className="text-purple-400">smart, user-friendly technology</span>.
               </p>
             </div>
             <button
