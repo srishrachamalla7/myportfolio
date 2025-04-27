@@ -242,7 +242,7 @@ export const categories: TechCategory[] = [
       ]
     },
     {
-      title: 'Vibecoding',
+      title: 'AI Dev Tools',
       items: [
       {
         name: 'Bolt.new',
