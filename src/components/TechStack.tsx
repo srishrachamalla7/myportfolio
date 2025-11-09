@@ -29,7 +29,7 @@ const TechStack = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="tech-icon mb-2"
+                    className={`tech-icon mb-2 ${item.invertColors ? 'invert' : ''}`}
                   />
                   <span className="text-sm text-gray-400">{item.name}</span>
 

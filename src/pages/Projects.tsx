@@ -14,6 +14,8 @@ import {
   ScaleIcon,
   AccessibilityIcon,
   Apple,
+  Smartphone,
+  Zap,
 } from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
 
@@ -103,6 +105,22 @@ const Projects = () => {
 };
 
 const projects = [
+  {
+    title: 'SST-Thinking - Edge AI LLM for Mobile Devices',
+    description: 'Fine-tuned Google Gemma-3-270M model optimized for edge devices and mobile phones, similar to Apple Intelligence. Uses Unsloth for efficient 4x faster training with 70% less memory usage. Designed to run locally on smartphones for privacy-focused AI assistance.',
+    icon: <Smartphone className="w-6 h-6" />,
+    link: 'https://huggingface.co/Srish117/SST-thinking',
+    date: '2025',
+    tags: ['Python', 'Unsloth', 'Fine-tuning', 'LLM', 'Edge AI', 'Google Gemma', 'HuggingFace', 'Mobile AI'],
+  },
+  {
+    title: 'Custom Domain-Specific LLM with Unsloth',
+    description: 'Fine-tuned large language model specialized for industry-specific applications using Unsloth framework. Achieved 4x faster training speed and significantly reduced memory footprint while maintaining high accuracy. Deployed on HuggingFace for easy integration.',
+    icon: <Zap className="w-6 h-6" />,
+    link: 'https://huggingface.co/Srish117',
+    date: '2025',
+    tags: ['Python', 'Unsloth', 'Fine-tuning', 'LLM', 'PEFT', 'LoRA', 'HuggingFace', 'Model Optimization'],
+  },
   {
     title: 'Autohire - Unified Enterprise Hiring Platform',
     description: 'A comprehensive hiring platform delivering business impact. Includes two sub-platforms: Autohire Prep for students and Autohire Placements for colleges.',
