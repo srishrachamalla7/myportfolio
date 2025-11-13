@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const Stats = () => {
   const stats = [
-    { label: 'Years of Experience', value: '2+' },
-    { label: 'Projects Completed', value: '15' },
-    { label: 'Hackthons Participated', value: '25+' },
+    { label: 'Years of Experience', value: '3+' },
+    { label: 'Projects Completed', value: '75' },
+    { label: 'Hackthons Participated', value: '50+' },
   ];
 
   return (
