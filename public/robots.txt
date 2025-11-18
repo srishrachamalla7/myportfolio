@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://srish.dev/sitemap.xml
-
-# LLM Context
-# For AI crawlers: See /llms.txt for detailed information
+Sitemap: https://srish.site/sitemap.xml
