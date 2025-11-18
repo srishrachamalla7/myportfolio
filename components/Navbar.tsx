@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Menu, X, Github, Linkedin, Twitter, PenSquare, Terminal, Sparkles, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SOCIALS, PROJECTS } from '../constants';
+import hfLogo from '../hf-logo-pirate.svg';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -169,7 +170,7 @@ export const Navbar: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    <img src="/hf-logo-pirate.svg" alt="Hugging Face" className="w-5 h-5" />
+                    <img src={hfLogo} alt="Hugging Face" className="w-5 h-5" />
                   </a>
                 )}
                 {SOCIALS.twitter && (
@@ -280,7 +281,7 @@ export const Navbar: React.FC = () => {
                    rel="noopener noreferrer"
                    className="p-4 border border-white/10 rounded-full text-gray-400 hover:text-primary hover:border-primary transition-colors"
                  >
-                    <img src="/hf-logo-pirate.svg" alt="Hugging Face" className="w-6 h-6" />
+                    <img src={hfLogo} alt="Hugging Face" className="w-6 h-6" />
                  </a>
                )}
                {SOCIALS.twitter && (
